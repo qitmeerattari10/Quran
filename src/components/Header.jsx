@@ -1,4 +1,4 @@
-
+import App from "../pages/Home";
 
 
 function Header() {
