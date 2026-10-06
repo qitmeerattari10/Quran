@@ -1,4 +1,5 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
@@ -1202,4 +1203,280 @@ button:focus-visible {
         line-height: 1.7;
     }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+.para-section {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 70px 35px 100px;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(176, 138, 53, 0.08),
+            transparent 25%
+        ),
+        #faf9f5;
+}
+
+.para-container {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.para-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+
+/* CARD */
+
+.para-card {
+    position: relative;
+
+    min-height: 105px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 17px 18px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+.para-card:hover {
+    transform: translateY(-5px);
+
+    background: #fffdf8;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* NUMBER */
+
+.para-number {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 15px;
+
+    color: #7c5c20;
+
+    background: #f4efe2;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transform: rotate(45deg);
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.para-number::first-letter {
+    transform: rotate(-45deg);
+}
+
+.para-card:hover .para-number {
+    color: #ffffff;
+
+    background: #b08a35;
+
+    transform: rotate(45deg) scale(1.05);
+}
+
+
+/* NUMBER TEXT FIX */
+
+.para-number {
+    line-height: 1;
+}
+
+.para-number {
+    text-indent: 0;
+}
+
+
+/* INFO */
+
+.para-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.para-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+/* ENGLISH TITLE */
+
+.para-top h3 {
+    margin: 0 0 3px;
+
+    color: #222222;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.para-top p {
+    margin: 0;
+
+    color: #858585;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+
+/* ARABIC */
+
+.para-arabic {
+    flex-shrink: 0;
+
+    color: #9b752f;
+
+    font-family: "Amiri", serif;
+
+    font-size: 21px;
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    direction: rtl;
+}
+
+
+/* AYAH COUNT */
+
+.ayah-count {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #999999;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1150px) {
+
+    .para-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+
+    .para-section {
+        padding: 55px 25px 80px;
+    }
+
+    .para-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .para-section {
+        padding: 45px 18px 70px;
+    }
+
+    .para-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+    }
+
+    .para-card {
+        min-height: 100px;
+        padding: 15px;
+    }
+
+    .para-number {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 12px;
+
+        font-size: 12px;
+    }
+
+    .para-top h3 {
+        font-size: 12px;
+    }
+
+    .para-top p {
+        font-size: 9px;
+    }
+
+    .para-arabic {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .para-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .para-card {
+        min-height: 95px;
+    }
 }
